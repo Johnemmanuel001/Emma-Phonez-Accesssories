@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emma Phonez Accessories | Premium Phone Accessories, Ado Ekiti</title>
+<meta name="description" content="Emma Phonez Accessories — premium phone cases, chargers, earphones, screen protectors, power banks, stands and many more, Ado Ekiti.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playfair+Display:wght@500;600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0b0b0c;
+    --charcoal:#151417;
+    --charcoal-2:#1d1b20;
+    --gold:#c9a227;
+    --gold-light:#e8d48a;
+    --gold-deep:#8a6d1f;
+    --cream:#f6f1e6;
+    --cream-dim:#cfc7b3;
+    --muted:#9a9490;
+    --hairline: rgba(201,162,39,0.28);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--black);
+    color:var(--cream);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    letter-spacing:0.01em;
+    color:var(--cream);
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  img,svg{display:block;max-width:100%;}
+
+  .eyebrow{
+    font-family:'Jost', sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:500;
+  }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 40px;
+  }
+
+  /* ---------- gold hairline frame corners, signature motif ---------- */
+  .corner-frame{
+    position:relative;
+  }
+  .corner-frame::before,
+  .corner-frame::after{
+    content:"";
+    position:absolute;
+    width:26px;height:26px;
+    border-top:1px solid var(--gold);
+    border-left:1px solid var(--gold);
+    top:-14px;left:-14px;
+    opacity:0.9;
+  }
+  .corner-frame::after{
+    top:auto;left:auto;
+    bottom:-14px;right:-14px;
+    border-top:none;border-left:none;
+    border-bottom:1px solid var(--gold);
+    border-right:1px solid var(--gold);
+  }
+
+  .emblem{
+    width:64px;height:64px;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:100;
+    background:rgba(11,11,12,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--hairline);
+    transition:padding 0.3s ease;
+  }
+  .header-inner{
+    max-width:1180px;
+    margin:0 auto;
+    padding:18px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .brand-mark{
+    width:42px;height:42px;
+    flex-shrink:0;
+  }
+  .brand-name{
+    font-family:'Playfair Display', serif;
+    font-size:1.05rem;
+    letter-spacing:0.04em;
+    color:var(--cream);
+    line-height:1.1;
+  }
+  .brand-name span{
+    display:block;
+    font-family:'Jost',sans-serif;
+    font-size:0.6rem;
+    letter-spacing:0.28em;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-top:3px;
+  }
+  nav{
+    display:flex;
+    align-items:center;
+    gap:38px;
+  }
+  nav a{
+    font-size:0.82rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    position:relative;
+    padding-bottom:4px;
+    transition:color 0.3s ease;
+  }
+  nav a::after{
+    content:"";
+    position:absolute;
+    bottom:0;left:0;
+    width:0;height:1px;
+    background:var(--gold);
+    transition:width 0.3s ease;
+  }
+  nav a:hover{color:var(--gold-light);}
+  nav a:hover::after{width:100%;}
+  .btn-nav-cta{
+    border:1px solid var(--gold);
+    padding:10px 22px;
+    font-size:0.75rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    transition:all 0.35s ease;
+  }
+  .btn-nav-cta:hover{
+    background:var(--gold);
+    color:var(--black);
+  }
+  .nav-toggle{display:none;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    padding:160px 40px 100px;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% 20%, rgba(201,162,39,0.10), transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(201,162,39,0.06), transparent 60%),
+      var(--black);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(var(--hairline) 1px, transparent 1px),
+      linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
+    background-size:64px 64px;
+    opacity:0.12;
+    mask-image:radial-gradient(ellipse at center, black 0%, transparent 70%);
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:26px;
+  }
+  .hero-emblem{
+    width:88px;height:88px;
+    margin-bottom:6px;
+    animation:fadeDown 1s ease both;
+  }
+  .hero-eyebrow{
+    animation:fadeDown 1s ease 0.15s both;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 6vw, 4.4rem);
+    line-height:1.08;
+    animation:fadeDown 1s ease 0.3s both;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold-light);
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+  }
+  .hero p.lede{
+    font-size:1.05rem;
+    color:var(--cream-dim);
+    max-width:540px;
+    animation:fadeDown 1s ease 0.45s both;
+  }
+  .hero-actions{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:10px;
+    animation:fadeDown 1s ease 0.6s both;
+  }
+
+  @keyframes fadeDown{
+    from{opacity:0; transform:translateY(-16px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 34px;
+    font-size:0.8rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:500;
+    border-radius:2px;
+    cursor:pointer;
+    transition:all 0.4s cubic-bezier(.2,.7,.3,1);
+  }
+  .btn-gold{
+    background:linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-deep));
+    color:var(--black);
+    border:1px solid var(--gold);
+    box-shadow:0 8px 26px -8px rgba(201,162,39,0.55);
+  }
+  .btn-gold:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 34px -10px rgba(201,162,39,0.75);
+  }
+  .btn-outline{
+    border:1px solid var(--hairline);
+    color:var(--cream);
+    background:transparent;
+  }
+  .btn-outline:hover{
+    border-color:var(--gold);
+    color:var(--gold-light);
+    transform:translateY(-3px);
+  }
+
+  .hero-tagline-strip{
+    margin-top:36px;
+    display:flex;
+    gap:34px;
+    align-items:center;
+    color:var(--muted);
+    font-size:0.72rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    animation:fadeDown 1s ease 0.75s both;
+  }
+  .dot-sep{width:4px;height:4px;background:var(--gold);border-radius:50%;}
+
+  /* ---------- section shell ---------- */
+  section{
+    position:relative;
+    padding:120px 0;
+  }
+  .section-head{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 70px;
+  }
+  .section-head h2{
+    font-size:clamp(2rem, 4vw, 2.8rem);
+    margin-top:14px;
+  }
+  .section-head p{
+    margin-top:18px;
+    color:var(--cream-dim);
+    font-size:1rem;
+  }
+  .divider-mark{
+    width:14px;height:14px;
+    background:var(--gold);
+    transform:rotate(45deg);
+    margin:0 auto;
+  }
+
+  /* ---------- intro ---------- */
+  .intro{
+    background:var(--charcoal);
+    border-top:1px solid var(--hairline);
+    border-bottom:1px solid var(--hairline);
+  }
+  .intro .wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+  }
+  .intro-visual{
+    position:relative;
+    height:100%;
+    min-height:320px;
+    border:1px solid var(--hairline);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(201,162,39,0.14), transparent 55%),
+      var(--charcoal-2);
+  }
+  .intro-visual .emblem{width:120px;height:120px;}
+  .intro-text .eyebrow{margin-bottom:16px;display:block;}
+  .intro-text h2{font-size:clamp(1.8rem, 3.4vw, 2.4rem); margin-bottom:22px;}
+  .intro-text p{color:var(--cream-dim); margin-bottom:16px; font-size:1rem;}
+  .intro-stats{
+    display:flex;
+    gap:46px;
+    margin-top:34px;
+    padding-top:30px;
+    border-top:1px solid var(--hairline);
+  }
+  .intro-stats div h3{font-size:1.7rem; color:var(--gold-light);}
+  .intro-stats div span{
+    display:block;
+    font-size:0.68rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:6px;
+  }
+
+  /* ---------- products ---------- */
+  .products-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2px;
+    background:var(--hairline);
+    border:1px solid var(--hairline);
+  }
+  .product-card{
+    background:var(--black);
+    padding:52px 36px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+    position:relative;
+    transition:background 0.4s ease, transform 0.4s ease;
+    overflow:hidden;
+  }
+  .product-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 20% 15%, rgba(201,162,39,0.10), transparent 60%);
+    opacity:0;
+    transition:opacity 0.4s ease;
+  }
+  .product-card:hover{
+    background:var(--charcoal);
+    transform:translateY(-4px);
+  }
+  .product-card:hover::before{opacity:1;}
+  .product-icon{
+    width:56px;height:56px;
+    color:var(--gold);
+    position:relative;
+    z-index:1;
+  }
+  .product-num{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:0.85rem;
+    color:var(--muted);
+    letter-spacing:0.06em;
+  }
+  .product-card h3{
+    font-size:1.28rem;
+    position:relative;
+    z-index:1;
+  }
+  .product-card p{
+    color:var(--cream-dim);
+    font-size:0.92rem;
+    position:relative;
+    z-index:1;
+  }
+  .product-enquire{
+    margin-top:auto;
+    padding-top:14px;
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    position:relative;
+    z-index:1;
+    border-bottom:1px solid transparent;
+    transition:border-color 0.3s ease, gap 0.3s ease;
+  }
+  .product-enquire:hover{
+    border-color:var(--gold);
+    gap:12px;
+  }
+
+  /* ---------- visit / contact plaque ---------- */
+  .visit{
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,162,39,0.10), transparent 55%),
+      var(--charcoal);
+    border-top:1px solid var(--hairline);
+  }
+  .plaque{
+    max-width:980px;
+    margin:0 auto;
+    border:1px solid var(--gold);
+    padding:70px 60px;
+    position:relative;
+    background:var(--black);
+  }
+  .plaque-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:50px;
+  }
+  .plaque-col h4{
+    font-family:'Jost',sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  .plaque-col p, .plaque-col a{
+    color:var(--cream-dim);
+    font-size:0.98rem;
+    display:block;
+    margin-bottom:8px;
+  }
+  .plaque-col a:hover{color:var(--gold-light);}
+  .hours-row{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    padding:7px 0;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    font-size:0.92rem;
+  }
+  .hours-row span:first-child{color:var(--cream-dim);}
+  .hours-row span:last-child{color:var(--cream); font-family:'Cormorant Garamond', serif; font-style:italic; letter-spacing:0.02em;}
+  .plaque-cta{
+    text-align:center;
+    margin-top:54px;
+    padding-top:46px;
+    border-top:1px solid var(--hairline);
+  }
+  .plaque-cta p{color:var(--cream-dim); margin-bottom:26px; font-size:1rem;}
+  .plaque-cta .hero-actions{margin-top:0;}
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:44px 0 34px;
+    text-align:center;
+    background:var(--black);
+    border-top:1px solid var(--hairline);
+  }
+  footer .brand-mark-small{
+    width:34px;height:34px;
+    margin:0 auto 14px;
+  }
+  footer p{
+    color:var(--muted);
+    font-size:0.78rem;
+    letter-spacing:0.04em;
+  }
+  footer .foot-links{
+    margin-top:14px;
+    display:flex;
+    gap:24px;
+    justify-content:center;
+  }
+  footer .foot-links a{
+    color:var(--cream-dim);
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  footer .foot-links a:hover{color:var(--gold-light);}
+
+  /* ---------- floating whatsapp ---------- */
+  .float-whatsapp{
+    position:fixed;
+    bottom:28px;
+    right:28px;
+    z-index:200;
+    width:58px;height:58px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--gold-light), var(--gold));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 10px 30px -8px rgba(201,162,39,0.6);
+    transition:transform 0.35s ease;
+  }
+  .float-whatsapp:hover{transform:scale(1.08);}
+  .float-whatsapp svg{width:28px;height:28px;color:var(--black);}
+
+  /* ---------- reveal on scroll ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px){
+    .intro .wrap{grid-template-columns:1fr; gap:40px;}
+    .products-grid{grid-template-columns:repeat(2,1fr);}
+    .plaque-grid{grid-template-columns:1fr; gap:34px;}
+    nav{
+      position:fixed;
+      top:76px; right:0;
+      background:var(--black);
+      border-left:1px solid var(--hairline);
+      border-bottom:1px solid var(--hairline);
+      flex-direction:column;
+      align-items:flex-start;
+      padding:26px 30px;
+      gap:20px;
+      transform:translateX(100%);
+      transition:transform 0.4s ease;
+    }
+    nav.open{transform:translateX(0);}
+    .nav-toggle{
+      display:flex;
+      flex-direction:column;
+      gap:5px;
+      cursor:pointer;
+      background:none;
+      border:none;
+      padding:8px;
+    }
+    .nav-toggle span{width:22px;height:1px;background:var(--gold);}
+  }
+  @media (max-width: 620px){
+    .wrap{padding:0 22px;}
+    .hero{padding:150px 22px 80px;}
+    .products-grid{grid-template-columns:1fr;}
+    .plaque{padding:44px 26px;}
+    section{padding:80px 0;}
+    .hero-tagline-strip{flex-direction:column; gap:10px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="47" stroke="#C9A227" stroke-width="1.4"/>
+        <circle cx="50" cy="50" r="39" stroke="#C9A227" stroke-width="0.6" opacity="0.6"/>
+        <text x="50" y="61" text-anchor="middle" font-family="Playfair Display, serif" font-size="34" fill="#E8D48A" font-weight="700">E</text>
+      </svg>
+      <div class="brand-name">Emma Phonez<span>Accessories</span></div>
+    </a>
+    <nav id="siteNav">
+      <a href="#products">Collection</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit &amp; Contact</a>
+      <a class="btn-nav-cta" href="https://wa.me/2347068976647" target="_blank" rel="noopener">Order Now</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <svg class="hero-emblem" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="47" stroke="#C9A227" stroke-width="1.2"/>
+      <circle cx="50" cy="50" r="39" stroke="#C9A227" stroke-width="0.5" opacity="0.6"/>
+      <text x="50" y="61" text-anchor="middle" font-family="Playfair Display, serif" font-size="34" fill="#E8D48A" font-weight="700">E</text>
+    </svg>
+    <span class="eyebrow hero-eyebrow">Ado Ekiti · Curated Phone Accessories</span>
+    <h1>Accessories worthy<br><em>of your phone.</em></h1>
+    <p class="lede">Emma Phonez Accessories brings a refined selection of phone cases, chargers, earphones, screen protection, power banks and stands to Ado Ekiti — chosen for buyers who expect nothing less than the best.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="https://wa.me/2347068976647" target="_blank" rel="noopener">Order on WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+2347068976647">Call 0706 897 6647</a>
+    </div>
+    <div class="hero-tagline-strip">
+      <span>Premium Materials</span><span class="dot-sep"></span>
+      <span>Trusted World Wide</span><span class="dot-sep"></span>
+      <span>Same-Day Enquiries</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTRO / ABOUT ============ -->
+<section class="intro" id="about">
+  <div class="wrap">
+    <div class="intro-visual reveal corner-frame">
+      <svg class="emblem" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="47" stroke="#C9A227" stroke-width="1"/>
+        <circle cx="50" cy="50" r="39" stroke="#C9A227" stroke-width="0.5" opacity="0.5"/>
+        <text x="50" y="61" text-anchor="middle" font-family="Playfair Display, serif" font-size="34" fill="#E8D48A" font-weight="700">E</text>
+      </svg>
+    </div>
+    <div class="intro-text reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2>Small details.<br>Uncompromising standard.</h2>
+      <p>Emma Phonez Accessories was founded on a simple belief: the accessories that touch your phone every day deserve the same care you gave to choosing the phone itself.</p>
+      <p>From hand-selected leather-finish cases to fast chargers built for longevity, every item on our shelf is chosen for durability, elegance and performance — nothing sold to us is good enough until it's good enough for you.</p>
+      <div class="intro-stats">
+        <div><h3>50+</h3><span>Accessory Categories</span></div>
+        <div><h3>100%</h3><span>Quality Checked</span></div>
+        <div><h3>6/7</h3><span>Days Open Weekly</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section id="products">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="divider-mark"></div>
+      <span class="eyebrow">The Collection</span>
+      <h2>Everything your phone deserves</h2>
+      <p>Different curated categories, one standard of quality. Enquire on any item and we'll confirm availability and pricing directly on WhatsApp.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card reveal">
+        <img src="images/phone-cases.jpg"
+        alt="Phone-Cases"  class="product-image"
+        <span class="product-num"></span>
+        <h3>Premium Phone Cases</h3>
+        <p>Leather-finish and shock-guard cases that protect without hiding your phone's design.</p>
+        <a class="product-enquire" href="https://wa.me/2347068976647?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Premium%20Phone%20Cases" target="_blank" rel="noopener">Enquire &rarr;</a>
+      </div>
+
+      <div class="product-card reveal">
+        <img src="images/chargers.jpg"
+        alt="Chargers"  class="product-image">
+        <span class="product-num"></span>
+        <h3>Fast Chargers &amp; Cables</h3>
+        <p>High-speed charging blocks and reinforced cables built to outlast daily use.</p>
+        <a class="product-enquire" href="https://wa.me/2347068976647?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Fast%20Chargers%20%26%20Cables" target="_blank" rel="noopener">Enquire &rarr;</a>
+      </div>
+
+      <div class="product-card reveal">
+        <img src="images/earphones.jpg"
+        alt="Earphones" class="product-image">
+        <span class="product-num"></span>
+        <h3>Earphones &amp; Earbuds</h3>
+        <p>Wired and wireless audio pieces balancing crisp sound with all-day comfort.</p>
+        <a class="product-enquire" href="https://wa.me/2347068976647?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Earphones%20%26%20Earbuds" target="_blank" rel="noopener">Enquire &rarr;</a>
+      </div>
+
+      <div class="product-card reveal">
+        <img src="images/screen-protectors.jpg"
+        alt="Screen Protectors"
+        class="product-image">
+        <span class="product-num"></span>
+        <h3>Tempered Screen Protectors</h3>
+        <p>Precision-cut glass that guards your display without dulling touch sensitivity.</p>
+        <a class="product-enquire" href="https://wa.me/2347068976647?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Tempered%20Screen%20Protectors" target="_blank" rel="noopener">Enquire &rarr;</a>
+      </div>
+
+      <div class="product-card reveal">
+        <img src="images/powerbanks.jpg"
+        alt="Power Banks" class=""product-image">
+        <span class="product-num"></span>
+        <h3>Power Banks</h3>
+        <p>Reliable, high-capacity backup power for phones that never stop working.</p>
+        <a class="product-enquire" href="https://wa.me/2347068976647?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Power%20Banks" target="_blank" rel="noopener">Enquire &rarr;</a>
+      </div>
+
+      <div class="product-card reveal">
+        <img src="images/phone-stands (1).jpg"
+        alt="Phone Stand" class="product-image">
+        <span class="product-num"></span>
+        <h3>Phone Stands &amp; Holders</h3>
+        <p>Desk, car and bedside stands crafted for stability and elegant display.</p>
+        <a class="product-enquire" href="https://wa.me/2347068976647?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Phone%20Stands%20%26%20Holders" target="_blank" rel="noopener">Enquire &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT / CONTACT ============ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="divider-mark"></div>
+      <span class="eyebrow">Visit The Shop</span>
+      <h2>Come see the collection</h2>
+      <p>Walk in, call, or reach us directly on WhatsApp — our team is ready to help you choose right.</p>
+    </div>
+
+    <div class="plaque reveal">
+      <div class="plaque-grid">
+        <div class="plaque-col">
+          <h4>Location</h4>
+          <p>Emma Phonez Accessories</p>
+          <p>Ado Ekiti, Ekiti State, Nigeria</p>
+        </div>
+        <div class="plaque-col">
+          <h4>Contact</h4>
+          <a href="tel:+2347068976647">Call: 0706 897 6647</a>
+          <a href="https://wa.me/2347068976647" target="_blank" rel="noopener">WhatsApp: 0706 897 6647</a>
+        </div>
+        <div class="plaque-col">
+          <h4>Opening Hours</h4>
+          <div class="hours-row"><span>Monday &ndash; Friday</span><span>9:00am &ndash; 5:00pm</span></div>
+          <div class="hours-row"><span>Saturday</span><span>10:00am &ndash; 4:00pm</span></div>
+          <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+
+      <div class="plaque-cta">
+        <p>Ready to upgrade your phone's accessories?</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="https://wa.me/2347068976647" target="_blank" rel="noopener">Chat With Us on WhatsApp</a>
+          <a class="btn btn-outline" href="tel:+2347068976647">Call 0706 897 6647</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <svg class="brand-mark-small" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="47" stroke="#C9A227" stroke-width="1.4"/>
+    <text x="50" y="61" text-anchor="middle" font-family="Playfair Display, serif" font-size="34" fill="#E8D48A" font-weight="700">E</text>
+  </svg>
+  <p>&copy; 2026 Emma Phonez Accessories &middot; Ado Ekiti, Nigeria. All rights reserved.</p>
+  <div class="foot-links">
+    <a href="tel:+2347068976647">Call</a>
+    <a href="https://wa.me/2347068976647" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="#top">Back to Top</a>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="float-whatsapp" href="https://wa.me/2347068976647" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.696 4.61 1.897 6.481L4 29l7.72-1.867A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.334l-.349-.207-4.58 1.107 1.128-4.463-.228-.365A9.556 9.556 0 1 1 25.556 15 9.567 9.567 0 0 1 16 24.6zm5.24-7.16c-.287-.144-1.696-.836-1.958-.932-.263-.096-.454-.144-.645.144-.19.287-.74.932-.907 1.123-.167.19-.334.215-.62.072-.287-.144-1.212-.447-2.31-1.427-.854-.762-1.43-1.703-1.598-1.99-.167-.287-.018-.442.126-.585.129-.129.287-.335.43-.502.144-.167.192-.287.288-.478.096-.191.048-.359-.024-.503-.072-.144-.645-1.556-.884-2.132-.233-.56-.47-.484-.645-.493l-.55-.01c-.191 0-.502.072-.765.359-.263.287-1.004.981-1.004 2.393s1.028 2.776 1.171 2.967c.144.191 2.023 3.09 4.902 4.332.685.296 1.219.473 1.635.605.687.219 1.312.188 1.806.114.551-.082 1.696-.693 1.935-1.363.24-.67.24-1.244.168-1.363-.072-.12-.263-.191-.55-.335z"/>
+  </svg>
+</a>
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const siteNav = document.getElementById('siteNav');
+  navToggle.addEventListener('click', () => siteNav.classList.toggle('open'));
+  siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => siteNav.classList.remove('open')));
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
